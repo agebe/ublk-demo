@@ -43,21 +43,9 @@ Here are some steps to test kernel modules:
 
 the [demo_null.c](https://github.com/ublk-org/ublksrv/blob/master/demo_null.c) is from the git repo ublksrv
 
-compile like to:
-
-gcc -I ~/grok/ublksrv -I ~/grok/ublksrv/include -o demo_null demo_null.c -L/home/andre/grok/ublksrv/lib/.libs -lublksrv -luring
-
-you have to be root to run this as it needs to access /dev/ublk-control. when changing to root do this to run the demo:
-
-export LD_LIBRARY_PATH=/home/andre/grok/ublksrv/lib/.libs
-/home/andre/grok/ublk/demo_null
 
 
-next step might be to make custom debian packages for ublksrv (contains the libs ublk binary and demos) and ublksrv-dev which has the headers
-also make a ublk-driver package that has the kernel module (DKMS) as the ublk-driver is not compiled in debian bookworm unfortunately
- - how to make debian packages?
- - how to make DKMS debian packages?
- - https://wiki.debian.org/DebianRepository/Setup
 
- figure out where the actuall IO access (read/write) in a ublk 
+
+
 
